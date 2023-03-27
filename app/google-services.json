@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "698178114996",
+    "project_id": "samsungprojectjava",
+    "storage_bucket": "samsungprojectjava.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698178114996:android:00630f3ccb196361438ee1",
+        "android_client_info": {
+          "package_name": "com.example.samsungprojectjava"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698178114996-u90g536a2shh86ab11uehng7i12p0jhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_funkHRFYzunDYU4JLhXD_Sa1A7HEOFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "698178114996-u90g536a2shh86ab11uehng7i12p0jhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

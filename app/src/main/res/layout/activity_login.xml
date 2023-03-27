@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LaaActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_app_info"
+        android:textAlignment="center" />
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:hint="Логин"
+        android:id="@+id/edit_login">
+
+    </EditText>
+    <EditText
+        android:layout_height="wrap_content"
+        android:hint="Пароль"
+        android:layout_width="match_parent"
+        android:id="@+id/edit_password">
+    </EditText>
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/button_signup_fire"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_signup_fire"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/button_login_fire"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_login_fire"/>
+    <Button
+        android:layout_width="match_parent"
+        android:text="@string/button_login"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_login"/>
+    <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/check_remember_login"
+        android:id="@+id/check_login"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Правила пользования Yandex Maps:\nhttps://yandex.ru/legal/maps_termsofuse"
+        android:textAlignment="center"/>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Timetable</string>
+    <string name="button_home">Стартовая</string>
+    <string name="button_map">Карта</string>
+    <string name="button_settings">Настройки</string>
+    <string name="button_schedule">Расписание</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_event_name">Название события</string>
+    <string name="add_event_datetime">Дата и время</string>
+    <string name="add_event_importance">Уровень важности</string>
+    <string name="add_event_name_hint">Событие 1</string>
+    <string name="add_event_datetime_hint">01.01.2000 12:00</string>
+    <string name="add_event_importance_hint">1(min)-3(max)</string>
+    <string name="home_button_add_event">Добавить событие без метки</string>
+    <string name="home_button_add_event_map">Добавить событие с меткой</string>
+    <string name="home_button_logout">Выйти из аккаунта</string>
+    <string name="home_app_info">Timetable v0.1 by Дятлов А.С.</string>
+    <string name="button_confirm">Принять</string>
+    <string name="settings_all_text">За сколько минут напоминать о событиях</string>
+    <string name="settings_imp3_text">Важные</string>
+    <string name="settings_imp2_text">Средней важности</string>
+    <string name="settings_imp1_text">Незначительные</string>
+    <string name="event_name_title">Название</string>
+    <string name="event_date_title">Время</string>
+    <string name="event_importance_title">Важность</string>
+    <string name="button_login">Войти или создать (оффлайн)</string>
+    <string name="button_login_fire">Войти в аккаунт</string>
+    <string name="button_signup_fire">Создать аккаунт</string>
+    <string name="check_remember_login">Запомнить вход</string>
+</resources>

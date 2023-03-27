@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEventFragment"
+    android:layout_row="3"
+    android:layout_column="2"
+    android:gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:text="@string/settings_all_text"
+        android:textAlignment="center"/>
+
+    <TableRow android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="@string/settings_imp3_text"/>
+
+        <EditText
+            android:id="@+id/edt_h"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+    </TableRow>
+
+    <TableRow android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="@string/settings_imp2_text"/>
+
+        <EditText
+            android:id="@+id/edt_m"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"/>
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:text="@string/settings_imp1_text">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_l"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></EditText>
+    </TableRow>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:text="@string/button_confirm" />
+</TableLayout>

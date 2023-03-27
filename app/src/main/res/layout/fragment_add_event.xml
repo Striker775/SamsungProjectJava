@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddEventFragment"
+    android:layout_row="3"
+    android:layout_column="2">
+
+    <TableRow android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="@string/add_event_name"/>
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:hint="@string/add_event_name_hint" />
+    </TableRow>
+
+    <TableRow android:layout_height="match_parent">
+
+        <TextView
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:text="@string/add_event_datetime"/>
+
+        <EditText
+            android:id="@+id/edt_time"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:maxLength="16"
+            android:hint="@string/add_event_datetime_hint" />
+    </TableRow>
+    <TableRow>
+        <TextView
+            android:layout_weight="0.5"
+            android:layout_height="match_parent"
+            android:text="@string/add_event_importance">
+        </TextView>
+
+        <EditText
+            android:id="@+id/edt_importance"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:maxLength="1"
+            android:hint="@string/add_event_importance_hint"></EditText>
+    </TableRow>
+
+    <Button
+        android:id="@+id/btn_commit"
+        android:layout_width="match_parent"
+        android:text="@string/button_confirm" />
+
+</TableLayout>
