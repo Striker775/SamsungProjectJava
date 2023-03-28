@@ -4,6 +4,11 @@ plugins {
 }
 
 android {
+    packagingOptions {
+        jniLibs {
+            useLegacyPackaging = true
+        }
+    }
     namespace 'com.example.samsungprojectjava'
     compileSdk 32
 
