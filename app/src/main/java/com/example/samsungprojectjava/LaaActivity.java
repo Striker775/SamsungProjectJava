@@ -11,7 +11,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
+
 import java.util.ArrayList;
 
 
@@ -27,7 +28,7 @@ public class LaaActivity extends AppCompatActivity {
     boolean set_coords = false;
     DBScheduleClass mDBConnector;
     Context mContext;
-    Button btn_home, btn_map, btn_settings, btn_schedule;
+    ImageButton btn_home, btn_map, btn_settings, btn_schedule;
     static String CHANNEL_ID = "111";
     public void createService(){
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

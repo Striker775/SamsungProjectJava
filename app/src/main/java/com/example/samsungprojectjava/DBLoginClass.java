@@ -74,7 +74,7 @@ public class DBLoginClass { //Можно через дженерики
         int high = mCursor.getInt(NUM_COLUMN_HIGH_TASKS);
         int medium = mCursor.getInt(NUM_COLUMN_MEDIUM_TASKS);
         int low = mCursor.getInt(NUM_COLUMN_LOW_TASKS);
-        return new LoginClass(id, Login, Password, remember, high, medium, low);
+        return new LoginClass(id, Login, Password, remember, low, medium, high);
     }
     public LoginClass select_by_login(String Login) {
         Cursor mCursor = mDataBase.query(TABLE_NAME, null, COLUMN_LAST_LOGIN + " = ?", new String[]{String.valueOf(Login)}, null, null, null);
@@ -85,7 +85,7 @@ public class DBLoginClass { //Можно через дженерики
         int high = mCursor.getInt(NUM_COLUMN_HIGH_TASKS);
         int medium = mCursor.getInt(NUM_COLUMN_MEDIUM_TASKS);
         int low = mCursor.getInt(NUM_COLUMN_LOW_TASKS);
-        return new LoginClass(id, Login, Password, remember, high, medium, low);
+        return new LoginClass(id, Login, Password, remember, low, medium, high);
     }
     public LoginClass select_by_remember(int remember) {
         Cursor mCursor = mDataBase.query(TABLE_NAME, null, COLUMN_REMEMBER + " = ?", new String[]{String.valueOf(remember)}, null, null, null);
@@ -96,7 +96,7 @@ public class DBLoginClass { //Можно через дженерики
         int high = mCursor.getInt(NUM_COLUMN_HIGH_TASKS);
         int medium = mCursor.getInt(NUM_COLUMN_MEDIUM_TASKS);
         int low = mCursor.getInt(NUM_COLUMN_LOW_TASKS);
-        return new LoginClass(id, Login, Password, remember, high, medium, low);
+        return new LoginClass(id, Login, Password, remember, low, medium, high);
     }
 
     public ArrayList<LoginClass> selectAll(boolean select_remember) {
@@ -114,7 +114,7 @@ public class DBLoginClass { //Можно через дженерики
                     int high = mCursor.getInt(NUM_COLUMN_HIGH_TASKS);
                     int medium = mCursor.getInt(NUM_COLUMN_MEDIUM_TASKS);
                     int low = mCursor.getInt(NUM_COLUMN_LOW_TASKS);
-                    arr.add(new LoginClass(id, Login, Password, remember, high, medium, low));
+                    arr.add(new LoginClass(id, Login, Password, remember, low, medium, high));
                 }
             } while (mCursor.moveToNext());
         }

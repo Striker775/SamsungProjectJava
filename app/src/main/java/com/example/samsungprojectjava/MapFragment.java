@@ -45,7 +45,7 @@ public class MapFragment extends Fragment {
         return bitmap;
     }
     public Bitmap drawSimpleBitmap(String number) {
-        int picSize = 128;
+        int picSize = 64;
         Bitmap bitmap = Bitmap.createBitmap(picSize, picSize, Bitmap.Config.ARGB_8888);
         Canvas canvas = new Canvas(bitmap);
         Paint paint = new Paint();
@@ -54,7 +54,7 @@ public class MapFragment extends Fragment {
         canvas.drawCircle(picSize / 2, picSize / 2, picSize / 2, paint);
         paint.setColor(Color.WHITE);
         paint.setAntiAlias(true);
-        paint.setTextSize(32);
+        paint.setTextSize(16);
         paint.setTextAlign(Paint.Align.CENTER);
         canvas.drawText(number, picSize / 2,
                 picSize / 2 - ((paint.descent() + paint.ascent()) / 2), paint);
