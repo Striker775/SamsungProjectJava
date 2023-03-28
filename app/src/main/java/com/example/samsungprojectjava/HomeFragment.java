@@ -39,6 +39,7 @@ public class HomeFragment extends Fragment {
                 MapFragment new_fragment = new MapFragment();
                 ArrayList<ScheduleClass> objects = m.mDBConnector.selectAll();
                 Bundle extras = new Bundle();
+                extras.putBoolean("set_coords", true);
                 extras.putParcelableArrayList("arraylist", objects);
                 new_fragment.setArguments(extras);
                 final FragmentTransaction ft = m.getSupportFragmentManager().beginTransaction();
