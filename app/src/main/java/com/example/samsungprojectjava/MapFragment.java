@@ -32,6 +32,7 @@ import java.util.ArrayList;
 
 public class MapFragment extends Fragment {
     MapView mapview;
+    boolean set_coords;
     ArrayList<ScheduleClass> objects = new ArrayList<ScheduleClass>();
     public static Bitmap getBitmapFromVectorDrawable(Context context, int drawableId) {
         Drawable drawable = ContextCompat.getDrawable(context, drawableId);
@@ -71,6 +72,7 @@ public class MapFragment extends Fragment {
         Point start_point = null;
         Bundle extras = getArguments();
         if (extras != null) {
+            set_coords = extras.getBoolean("set_coords");
             objects = extras.getParcelableArrayList("arraylist");
             LaaActivity m = (LaaActivity)getActivity();
             for (int i = 0; i < objects.size(); i++)
@@ -92,7 +94,7 @@ public class MapFragment extends Fragment {
             @Override
             public void onMapTap(@NonNull Map map, @NonNull Point point) {
                 LaaActivity m = (LaaActivity)getActivity();
-                if (m.set_coords){
+                if (set_coords){
                     m.latitude = point.getLatitude();
                     m.longitude = point.getLongitude();
                     final FragmentTransaction ft = m.getSupportFragmentManager().beginTransaction();

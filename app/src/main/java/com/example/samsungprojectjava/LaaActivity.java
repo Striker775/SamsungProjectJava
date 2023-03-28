@@ -99,6 +99,7 @@ public class LaaActivity extends AppCompatActivity {
                 ArrayList<ScheduleClass> objects = mDBConnector.selectAll();
                 Bundle extras = new Bundle();
                 extras.putParcelableArrayList("arraylist", objects);
+                extras.putBoolean("set_coords", set_coords);
                 new_fragment.setArguments(extras);
                 final FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.fragment_a, new_fragment, "TheFragment");
