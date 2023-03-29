@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseNetworkException;
 import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -97,6 +98,9 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
                                         else if (ex == FirebaseAuthInvalidCredentialsException.class)
                                             Toast.makeText(mContext, "Проверьте правильность данных",
                                                     Toast.LENGTH_SHORT).show();
+                                        else if (ex == FirebaseNetworkException.class)
+                                            Toast.makeText(mContext, "Проверьте подключение к Интернету",
+                                                    Toast.LENGTH_SHORT).show();
                                         else
                                             Toast.makeText(mContext, task.getException().getClass().toString(),
                                                     Toast.LENGTH_SHORT).show();
@@ -133,6 +137,9 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
                                                     Toast.LENGTH_SHORT).show();
                                         else if (ex == FirebaseTooManyRequestsException.class)
                                             Toast.makeText(mContext, "Слишком много запросов, подождите",
+                                                    Toast.LENGTH_SHORT).show();
+                                        else if (ex == FirebaseNetworkException.class)
+                                            Toast.makeText(mContext, "Проверьте подключение к Интернету",
                                                     Toast.LENGTH_SHORT).show();
                                         else
                                             Toast.makeText(mContext, task.getException().getClass().toString(),
