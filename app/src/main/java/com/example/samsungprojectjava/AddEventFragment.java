@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TimePicker;
 import android.widget.Toast;
 import java.util.Calendar;
-
+//Фрагмент добавления события
 public class AddEventFragment extends Fragment {
     String date_time = "";
     int mYear;
@@ -28,17 +28,19 @@ public class AddEventFragment extends Fragment {
     int mHour;
     int mMinute;
     LaaActivity m;
+    //Перевод строки в Календарь
     public Calendar datetime_string_to_cal(String in){
         Calendar cal = Calendar.getInstance();
         cal.set(Integer.valueOf(in.substring(6,10)), Integer.valueOf(in.substring(3,5)) - 1, Integer.valueOf(in.substring(0,2)),
                 Integer.valueOf(in.substring(11,13)), Integer.valueOf(in.substring(14,16)), 0);
         return cal;
     }
+    //Обратный перевод из Календаря в строку
     public String datetime_cal_to_string(Calendar cal){
         return String.format("%02d.%02d.%04d %02d:%02d",cal.get(Calendar.DAY_OF_MONTH),cal.get(Calendar.MONTH) + 1,cal.get(Calendar.YEAR)
                 ,cal.get(Calendar.HOUR) + cal.get(Calendar.AM_PM) * 12,cal.get(Calendar.MINUTE));
     }
-
+    //Выбор даты и времени
     private void timePicker(){
         final Calendar c = Calendar.getInstance();
         mHour = c.get(Calendar.HOUR_OF_DAY);
@@ -93,6 +95,7 @@ public class AddEventFragment extends Fragment {
                 return false;
             }
         });
+        //Кнопка подтверждения события
         btn_accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

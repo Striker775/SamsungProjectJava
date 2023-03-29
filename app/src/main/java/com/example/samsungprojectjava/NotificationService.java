@@ -13,7 +13,7 @@ import androidx.core.app.NotificationManagerCompat;
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
-
+//Служба уведомлений о наступлении/оставшегося времени события
 public class NotificationService extends Service {
     Timer timer;
     TimerTask timerTask;
@@ -56,6 +56,7 @@ public class NotificationService extends Service {
     }
     final Handler handler = new Handler();
     public void startTimer() {
+        //Планирование уведомлений
         long cur_time = System.currentTimeMillis();
         for (int i = 0; i < objects.size(); i++) {
             if (cur_time > objects.get(i).time){
@@ -97,6 +98,7 @@ public class NotificationService extends Service {
             timer = null;
         }
     }
+    //Добавление потока в список запланированных (оповещение пользователя)
     public void initializeTimerTask(String msg, ScheduleClass sch) {
         timerTask = new TimerTask() {
             public void run() {

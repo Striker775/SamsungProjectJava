@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.yandex.mapkit.MapKitFactory;
 
 import java.util.ArrayList;
-
+//Активность регистрации/входа
 public class MainActivity extends androidx.fragment.app.FragmentActivity {
     static boolean mapkit_loaded = false;
     DBLoginClass mDBConnector;
@@ -39,6 +39,7 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
             currentUser.reload();
         }
     }
+    //Очистка флагов "запомнить логин и пароль"
     void clearRemember(){
         ArrayList<LoginClass> arr = mDBConnector.selectAll(true);
         for(int i = 0; i < arr.size(); i++) {
@@ -67,6 +68,7 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
         EditText ed_login = findViewById(R.id.edit_login);
         EditText ed_password = findViewById(R.id.edit_password);
         //btn_login.setVisibility(View.INVISIBLE);
+        //Проверка флага "запомнить логин и пароль"
         try {
             LoginClass data = mDBConnector.select_by_remember(1);
             ed_login.setText(data.login);
@@ -76,6 +78,7 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
         catch (android.database.CursorIndexOutOfBoundsException ex){
             ;
         }
+        //Кнопка входа с паролем (через интернет и Firebase)
         btn_login_fire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -105,6 +108,7 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
                         });
             }
         });
+        //Кнопка регистрации (через интернет и Firebase)
         btn_signup_fire.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -142,6 +146,7 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
                         });
             }
         });
+        //Кнопка входа (без интернета)
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -170,6 +175,7 @@ public class MainActivity extends androidx.fragment.app.FragmentActivity {
                     m_tasks = 60;
                     l_tasks = 30;
                 }
+                //Переход на активность после входа
                 Intent i;
                 i = new Intent(MainActivity.this, LaaActivity.class);
                 i.putExtra("login", ed_login.getText().toString());

@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import java.util.ArrayList;
-
+//Фрагмент домашней страницы
 public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -21,6 +21,7 @@ public class HomeFragment extends Fragment {
         Button btn_event_add = view.findViewById(R.id.btn_add_event);
         Button btn_event_add_map = view.findViewById(R.id.btn_add_event_map);
         Button btn_logout = view.findViewById(R.id.btn_logout);
+        //Добавление события без карты
         btn_event_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,6 +32,7 @@ public class HomeFragment extends Fragment {
                 ft.commit();
             }
         });
+        //Добавление события на карте
         btn_event_add_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,6 +49,7 @@ public class HomeFragment extends Fragment {
                 ft.commit();
             }
         });
+        //Выход из аккаунта
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

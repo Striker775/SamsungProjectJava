@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
-
+//Адаптер к RecyclerView во фрагменте расписания
 public class ScheduleClassAdapter extends RecyclerView.Adapter<ScheduleClassAdapter.ViewHolder> {
 
     private List<ScheduleClass> mData;

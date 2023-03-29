@@ -29,11 +29,12 @@ import com.yandex.mapkit.mapview.MapView;
 import com.yandex.runtime.image.ImageProvider;
 
 import java.util.ArrayList;
-
+//Фрагмент с картой Яндекса
 public class MapFragment extends Fragment {
     MapView mapview;
     boolean set_coords;
     ArrayList<ScheduleClass> objects = new ArrayList<ScheduleClass>();
+    //Перевод из векорного изображения в растровое
     public static Bitmap getBitmapFromVectorDrawable(Context context, int drawableId) {
         Drawable drawable = ContextCompat.getDrawable(context, drawableId);
 
@@ -45,6 +46,7 @@ public class MapFragment extends Fragment {
 
         return bitmap;
     }
+    //Подготовка меток с названием события на карте
     public Bitmap drawSimpleBitmap(String number) {
         int picSize = 64;
         Bitmap bitmap = Bitmap.createBitmap(picSize, picSize, Bitmap.Config.ARGB_8888);
@@ -73,6 +75,7 @@ public class MapFragment extends Fragment {
         Bundle extras = getArguments();
         if (extras != null) {
             set_coords = extras.getBoolean("set_coords");
+            //Прорисовка меток на карте
             objects = extras.getParcelableArrayList("arraylist");
             LaaActivity m = (LaaActivity)getActivity();
             for (int i = 0; i < objects.size(); i++)
@@ -90,6 +93,7 @@ public class MapFragment extends Fragment {
         }
         if (!start_point_found)
             start_point  = new Point(55.386799, 43.814133);
+        //Нажатие на карту
         mapview.getMap().addInputListener(new InputListener() {
             @Override
             public void onMapTap(@NonNull Map map, @NonNull Point point) {

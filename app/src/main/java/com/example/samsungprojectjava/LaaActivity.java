@@ -15,7 +15,7 @@ import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
-
+//Активность приложения после входа
 public class LaaActivity extends AppCompatActivity {
     String login = "";
     int h_tasks;
@@ -40,6 +40,7 @@ public class LaaActivity extends AppCompatActivity {
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }
+        //Активация службы уведомлений
         Intent i = new Intent(getApplicationContext(), NotificationService.class);
         ArrayList<ScheduleClass> objects = mDBConnector.selectAll();
         i.putExtra("array", objects);
@@ -70,6 +71,7 @@ public class LaaActivity extends AppCompatActivity {
         Fragment fragment = new HomeFragment();
         ft.replace(R.id.fragment_a, fragment, "TheFragment");
         ft.commit();
+        //Кнопка перехода на домашнюю страницу
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -78,6 +80,7 @@ public class LaaActivity extends AppCompatActivity {
                 ft.commit();
             }
         });
+        ////Кнопка перехода на расписание
         btn_schedule.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -91,6 +94,7 @@ public class LaaActivity extends AppCompatActivity {
                 ft.commit();
             }
         });
+        //Кнопка перехода на карту
         btn_map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,6 +110,7 @@ public class LaaActivity extends AppCompatActivity {
                 ft.commit();
             }
         });
+        //Кнопка перехода на настройки
         btn_settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

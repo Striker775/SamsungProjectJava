@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-
+//Связь с БД с расписанием
 public class DBScheduleClass {
     String login;
     private static final String DATABASE_NAME = "schedule.db";

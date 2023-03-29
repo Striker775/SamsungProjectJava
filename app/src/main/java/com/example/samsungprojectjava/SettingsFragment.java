@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
+//Фрагмент пользовательских настроек
 public class SettingsFragment extends Fragment {
     DBLoginClass mDBConnector;
     @Override

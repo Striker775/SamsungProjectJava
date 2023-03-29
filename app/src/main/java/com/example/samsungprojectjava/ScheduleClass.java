@@ -2,7 +2,7 @@ package com.example.samsungprojectjava;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-
+//Класс расписания
 public class ScheduleClass implements Parcelable {
     long id;
     String name;

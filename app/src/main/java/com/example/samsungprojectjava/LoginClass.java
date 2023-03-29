@@ -1,5 +1,5 @@
 package com.example.samsungprojectjava;
-
+//Класс данных о пользователе
 public class LoginClass {
     long id;
     String login;

@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
-
+//Связь с БД с данными пользователей
 public class DBLoginClass { //Можно через дженерики
     private static final String DATABASE_NAME = "login.db";
     private static final int DATABASE_VERSION = 1;

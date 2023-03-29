@@ -11,7 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
-
+//Фрагмент расписания
 public class ScheduleFragment extends Fragment {
     RecyclerView recyclerView;
     ArrayList<ScheduleClass> objects = new ArrayList<ScheduleClass>();
